@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kuy-tU-pUS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Plan Details View Controller-->
+        <scene sceneID="QsY-MA-e7n">
+            <objects>
+                <viewController id="Kuy-tU-pUS" customClass="PlanDetailsViewController" customModule="tripsPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6HT-qx-SUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GI0-ZK-YJB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-2m-uu1" userLabel="Read Plan Details Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="703.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-35-VnS" userLabel="Plan Details Label">
+                                                <rect key="frame" x="20" y="20" width="41.5" height="663.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn0-W1-KTM" userLabel="Edit Plan Button">
+                                                <rect key="frame" x="373.5" y="20" width="20.5" height="663.5"/>
+                                                <state key="normal" image="square.and.pencil" catalog="system"/>
+                                                <connections>
+                                                    <action selector="editPlanAction:" destination="Kuy-tU-pUS" eventType="touchUpInside" id="i9f-oB-xFc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Xet-35-VnS" firstAttribute="top" secondItem="QbA-2m-uu1" secondAttribute="top" constant="20" id="2sV-G9-QJo"/>
+                                            <constraint firstItem="Pn0-W1-KTM" firstAttribute="top" secondItem="QbA-2m-uu1" secondAttribute="top" constant="20" id="ArY-rn-e8v"/>
+                                            <constraint firstItem="Xet-35-VnS" firstAttribute="leading" secondItem="QbA-2m-uu1" secondAttribute="leading" constant="20" id="B9E-Zx-g5Z"/>
+                                            <constraint firstItem="Pn0-W1-KTM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xet-35-VnS" secondAttribute="trailing" constant="20" id="HZg-oU-Ucc"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xet-35-VnS" secondAttribute="bottom" constant="20" id="Qvv-vp-tFA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pn0-W1-KTM" secondAttribute="trailing" constant="20" id="rcU-Dp-gyj"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pn0-W1-KTM" secondAttribute="bottom" constant="20" id="ufc-7Y-ZUp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJ2-7p-wWw" userLabel="Edit Plan Details Container">
+                                        <rect key="frame" x="0.0" y="703.5" width="414" height="114.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmJ-4h-yfE">
+                                                <rect key="frame" x="20" y="60.5" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBk-J4-at3" userLabel="Title Label">
+                                                <rect key="frame" x="20" y="20" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mBk-J4-at3" firstAttribute="top" secondItem="yJ2-7p-wWw" secondAttribute="top" constant="20" id="Wr7-5h-Zju"/>
+                                            <constraint firstAttribute="trailing" secondItem="mBk-J4-at3" secondAttribute="trailing" constant="20" id="bRi-23-ZwA"/>
+                                            <constraint firstItem="kmJ-4h-yfE" firstAttribute="leading" secondItem="yJ2-7p-wWw" secondAttribute="leading" constant="20" id="cNI-yq-Yyr"/>
+                                            <constraint firstItem="mBk-J4-at3" firstAttribute="leading" secondItem="yJ2-7p-wWw" secondAttribute="leading" constant="20" id="hbO-dS-ALf"/>
+                                            <constraint firstAttribute="trailing" secondItem="kmJ-4h-yfE" secondAttribute="trailing" constant="20" id="pmS-BO-V05"/>
+                                            <constraint firstItem="kmJ-4h-yfE" firstAttribute="top" secondItem="mBk-J4-at3" secondAttribute="bottom" constant="20" id="tF2-2E-bas"/>
+                                            <constraint firstAttribute="bottom" secondItem="kmJ-4h-yfE" secondAttribute="bottom" constant="20" id="uPl-Vh-vRc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lpQ-PN-QjK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lpQ-PN-QjK" firstAttribute="bottom" secondItem="GI0-ZK-YJB" secondAttribute="bottom" id="CWG-Gu-82B"/>
+                            <constraint firstItem="GI0-ZK-YJB" firstAttribute="top" secondItem="lpQ-PN-QjK" secondAttribute="top" id="fdZ-q5-aur"/>
+                            <constraint firstItem="GI0-ZK-YJB" firstAttribute="leading" secondItem="lpQ-PN-QjK" secondAttribute="leading" id="nbt-sd-gzN"/>
+                            <constraint firstItem="lpQ-PN-QjK" firstAttribute="trailing" secondItem="GI0-ZK-YJB" secondAttribute="trailing" id="y6E-Y0-81h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editModeContainer" destination="yJ2-7p-wWw" id="caR-Zg-qi4"/>
+                        <outlet property="editModePlanNameTextField" destination="kmJ-4h-yfE" id="YKv-zV-vWk"/>
+                        <outlet property="editModeTitleLabel" destination="mBk-J4-at3" id="Yxb-Sk-zbv"/>
+                        <outlet property="readModeContainer" destination="QbA-2m-uu1" id="l5e-62-hmY"/>
+                        <outlet property="readModePlanNameLabel" destination="Xet-35-VnS" id="00K-w3-vII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uU5-Z7-xcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

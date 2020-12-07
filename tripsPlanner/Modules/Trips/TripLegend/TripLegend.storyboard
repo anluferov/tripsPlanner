@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T0o-3P-C0B">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trip Legend View Controller-->
+        <scene sceneID="msW-4R-YTr">
+            <objects>
+                <viewController id="T0o-3P-C0B" customClass="TripLegendViewController" customModule="tripsPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipO-xz-geu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWf-fg-zZV" userLabel="Edit Trip Info Button">
+                                <rect key="frame" x="363" y="74" width="21" height="22"/>
+                                <state key="normal" image="square.and.pencil" catalog="system"/>
+                                <connections>
+                                    <action selector="tapEditTripInfoAction:" destination="T0o-3P-C0B" eventType="touchUpInside" id="XuR-IQ-lrW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-3e-mOZ">
+                                <rect key="frame" x="186" y="74" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QCK-Ij-yw4" userLabel="Trip Details Stack View Container">
+                                <rect key="frame" x="0.0" y="115" width="414" height="200"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="200" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kGl-e4-FBK">
+                                <rect key="frame" x="0.0" y="315" width="414" height="200"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtv-dF-Tp3" userLabel="Add Trip Button">
+                                <rect key="frame" x="334" y="782" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xtv-dF-Tp3" secondAttribute="height" multiplier="1:1" id="IiJ-Ss-waq"/>
+                                    <constraint firstAttribute="width" constant="50" id="TGM-Np-pUf"/>
+                                </constraints>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="tapAddTripDetailAction:" destination="T0o-3P-C0B" eventType="touchUpInside" id="UMX-n5-j82"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bj2-gM-X9Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QCK-Ij-yw4" firstAttribute="leading" secondItem="bj2-gM-X9Z" secondAttribute="leading" id="3Kc-jx-GHA"/>
+                            <constraint firstItem="bj2-gM-X9Z" firstAttribute="trailing" secondItem="bWf-fg-zZV" secondAttribute="trailing" constant="30" id="6Th-oU-rMz"/>
+                            <constraint firstItem="bj2-gM-X9Z" firstAttribute="trailing" secondItem="Xtv-dF-Tp3" secondAttribute="trailing" constant="30" id="6ca-Xl-Tqe"/>
+                            <constraint firstItem="bj2-gM-X9Z" firstAttribute="trailing" secondItem="kGl-e4-FBK" secondAttribute="trailing" id="7kT-Sa-wLv"/>
+                            <constraint firstItem="Xtv-dF-Tp3" firstAttribute="width" secondItem="Xtv-dF-Tp3" secondAttribute="height" multiplier="1:1" id="P23-vw-Ba7"/>
+                            <constraint firstItem="O6A-3e-mOZ" firstAttribute="centerX" secondItem="ipO-xz-geu" secondAttribute="centerX" id="TIO-JN-Hxf"/>
+                            <constraint firstItem="QCK-Ij-yw4" firstAttribute="top" secondItem="O6A-3e-mOZ" secondAttribute="bottom" constant="20" id="a1H-cW-65b"/>
+                            <constraint firstItem="bWf-fg-zZV" firstAttribute="top" secondItem="bj2-gM-X9Z" secondAttribute="top" constant="30" id="bP5-ez-9UT"/>
+                            <constraint firstItem="bj2-gM-X9Z" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kGl-e4-FBK" secondAttribute="bottom" id="dqv-VU-VmS"/>
+                            <constraint firstItem="bj2-gM-X9Z" firstAttribute="trailing" secondItem="QCK-Ij-yw4" secondAttribute="trailing" id="jat-H7-hfZ"/>
+                            <constraint firstItem="O6A-3e-mOZ" firstAttribute="top" secondItem="bj2-gM-X9Z" secondAttribute="top" constant="30" id="nFu-R8-rWZ"/>
+                            <constraint firstItem="kGl-e4-FBK" firstAttribute="top" secondItem="QCK-Ij-yw4" secondAttribute="bottom" id="rFW-LJ-Dh9"/>
+                            <constraint firstItem="bj2-gM-X9Z" firstAttribute="bottom" secondItem="Xtv-dF-Tp3" secondAttribute="bottom" constant="30" id="s1a-CO-8pg"/>
+                            <constraint firstItem="kGl-e4-FBK" firstAttribute="leading" secondItem="bj2-gM-X9Z" secondAttribute="leading" id="ucm-C9-HKQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="legendTitleLabel" destination="O6A-3e-mOZ" id="dRD-KU-R7E"/>
+                        <outlet property="placesStackViewContainer" destination="kGl-e4-FBK" id="rdH-r3-4sn"/>
+                        <outlet property="tripDetailsStackViewContainer" destination="QCK-Ij-yw4" id="okw-cu-yYO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPe-XE-Ih2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="-7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

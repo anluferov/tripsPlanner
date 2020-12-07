@@ -3,29 +3,120 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50FB40E6112CB3BFF74E4EFB /* Pods_tripsPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118D086E54A750188FEFCDD2 /* Pods_tripsPlanner.framework */; };
+		CE1722A22571AE0E00AD32A1 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722A12571AE0E00AD32A1 /* RootPresenter.swift */; };
+		CE1722A52571AE1A00AD32A1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722A42571AE1A00AD32A1 /* RootViewController.swift */; };
+		CE1722A82571AE4100AD32A1 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722A72571AE4100AD32A1 /* TabBarPresenter.swift */; };
+		CE1722AB2571AE5300AD32A1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722AA2571AE5300AD32A1 /* TabBarViewController.swift */; };
+		CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */; };
+		CE1722B22571AE9F00AD32A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722B12571AE9F00AD32A1 /* ViewController.swift */; };
+		CE79F2F82571B32A0081239F /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79F2F72571B32A0081239F /* ViewControllable.swift */; };
 		CE9A60DE256BD51400193D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60DD256BD51400193D24 /* AppDelegate.swift */; };
 		CE9A60E0256BD51400193D24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60DF256BD51400193D24 /* SceneDelegate.swift */; };
-		CE9A60E2256BD51400193D24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60E1256BD51400193D24 /* ViewController.swift */; };
-		CE9A60E5256BD51400193D24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9A60E3256BD51400193D24 /* Main.storyboard */; };
 		CE9A60E8256BD51400193D24 /* tripsPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60E6256BD51400193D24 /* tripsPlanner.xcdatamodeld */; };
-		CE9A60EA256BD51700193D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9A60E9256BD51700193D24 /* Assets.xcassets */; };
 		CE9A60ED256BD51700193D24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9A60EB256BD51700193D24 /* LaunchScreen.storyboard */; };
+		CE9CDD6B2579788C0020E3E4 /* PlanDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9CDD6A2579788C0020E3E4 /* PlanDetails.storyboard */; };
+		CE9CDD7B25797B360020E3E4 /* PlanDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CDD7825797B360020E3E4 /* PlanDetailsPresenter.swift */; };
+		CE9CDD7C25797B360020E3E4 /* PlanDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CDD7925797B360020E3E4 /* PlanDetailsViewController.swift */; };
+		CE9CDD7D25797B360020E3E4 /* PlanDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CDD7A25797B360020E3E4 /* PlanDetailsBuilder.swift */; };
+		CE9CDD8925797B6A0020E3E4 /* PlaceDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9CDD8825797B6A0020E3E4 /* PlaceDetails.storyboard */; };
+		CE9CDD9025797BDC0020E3E4 /* PlaceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CDD8D25797BDC0020E3E4 /* PlaceDetailsPresenter.swift */; };
+		CE9CDD9125797BDC0020E3E4 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CDD8E25797BDC0020E3E4 /* PlaceDetailsViewController.swift */; };
+		CE9CDD9225797BDC0020E3E4 /* PlaceDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CDD8F25797BDC0020E3E4 /* PlaceDetailsBuilder.swift */; };
+		CEA4F986257289A100BE472E /* TripLegendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F985257289A100BE472E /* TripLegendPresenter.swift */; };
+		CEA4F989257289AB00BE472E /* TripLegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F988257289AB00BE472E /* TripLegendViewController.swift */; };
+		CEA4F98C257289B500BE472E /* TripLegendBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F98B257289B500BE472E /* TripLegendBuilder.swift */; };
+		CEA4F990257289CA00BE472E /* TripLegend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA4F98F257289CA00BE472E /* TripLegend.storyboard */; };
+		CEA4F9952572DBC700BE472E /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F9942572DBC700BE472E /* RootBuilder.swift */; };
+		CEA4F99A2572DC3400BE472E /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F9992572DC3400BE472E /* TabBarBuilder.swift */; };
+		CEA4F99F2572E08900BE472E /* TabBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F99E2572E08900BE472E /* TabBarItemViewModel.swift */; };
+		CEAC8A742572E52D00BDAD96 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8A732572E52D00BDAD96 /* TripViewModel.swift */; };
+		CEB45735257D3BD7000F12DF /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45734257D3BD7000F12DF /* TripDetail.swift */; };
+		CEB45740257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4573D257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift */; };
+		CEB45741257D5E2E000F12DF /* TripCreationNavigatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4573E257D5E2E000F12DF /* TripCreationNavigatorViewController.swift */; };
+		CEB45742257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4573F257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift */; };
+		CEB45746257D5E46000F12DF /* TripCreationNavigator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB45745257D5E46000F12DF /* TripCreationNavigator.storyboard */; };
+		CED7A4D525725C3F006C8BE3 /* TripsHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4D425725C3F006C8BE3 /* TripsHistoryPresenter.swift */; };
+		CED7A4D825725C4C006C8BE3 /* TripsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4D725725C4C006C8BE3 /* TripsHistoryViewController.swift */; };
+		CED7A4DB25725C8D006C8BE3 /* TripsHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED7A4DA25725C8D006C8BE3 /* TripsHistory.storyboard */; };
+		CED7A4DF2572628A006C8BE3 /* TripsHistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4DE2572628A006C8BE3 /* TripsHistoryBuilder.swift */; };
+		CED7A4E4257266E3006C8BE3 /* TripsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4E3257266E3006C8BE3 /* TripsService.swift */; };
+		CED7A4E8257266EE006C8BE3 /* TripsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4E7257266EE006C8BE3 /* TripsServiceProtocol.swift */; };
+		CED7A4EF257267F6006C8BE3 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4EE257267F6006C8BE3 /* ServiceContainer.swift */; };
+		CED7A4F9257270C2006C8BE3 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4F8257270C2006C8BE3 /* TripModel.swift */; };
+		CED7A4FC2572720E006C8BE3 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4FB2572720E006C8BE3 /* PlaceModel.swift */; };
+		CED7A4FF25727216006C8BE3 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A4FE25727216006C8BE3 /* PlanModel.swift */; };
+		CED7A50225727228006C8BE3 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A50125727228006C8BE3 /* ToDoModel.swift */; };
+		CED7A50525727233006C8BE3 /* ImpressionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A50425727233006C8BE3 /* ImpressionModel.swift */; };
+		CED7A50825727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */; };
+		CED7A51325728288006C8BE3 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A51225728288006C8BE3 /* TripCollectionViewCell.swift */; };
+		CED7A51825728424006C8BE3 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A51725728424006C8BE3 /* Array+Extension.swift */; };
+		CEE5A12E25724E8500E1569A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5A12D25724E8500E1569A /* R.generated.swift */; };
+		CEE5A136257252AA00E1569A /* ViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5A135257252AA00E1569A /* ViewRoutable.swift */; };
+		CEE5A13E257255DE00E1569A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE5A13D257255DE00E1569A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118D086E54A750188FEFCDD2 /* Pods_tripsPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tripsPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59739A2436A4D68FE84E5BF /* Pods-tripsPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsPlanner.release.xcconfig"; path = "Target Support Files/Pods-tripsPlanner/Pods-tripsPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		CE1722A12571AE0E00AD32A1 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		CE1722A42571AE1A00AD32A1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CE1722A72571AE4100AD32A1 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		CE1722AA2571AE5300AD32A1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInteractable.swift; sourceTree = "<group>"; };
+		CE1722B12571AE9F00AD32A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE79F2F72571B32A0081239F /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
 		CE9A60DA256BD51400193D24 /* tripsPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tripsPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9A60DD256BD51400193D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9A60DF256BD51400193D24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE9A60E1256BD51400193D24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE9A60E4256BD51400193D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9A60E7256BD51400193D24 /* tripsPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tripsPlanner.xcdatamodel; sourceTree = "<group>"; };
-		CE9A60E9256BD51700193D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9A60EC256BD51700193D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9A60EE256BD51700193D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9CDD6A2579788C0020E3E4 /* PlanDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlanDetails.storyboard; sourceTree = "<group>"; };
+		CE9CDD7825797B360020E3E4 /* PlanDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailsPresenter.swift; sourceTree = "<group>"; };
+		CE9CDD7925797B360020E3E4 /* PlanDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailsViewController.swift; sourceTree = "<group>"; };
+		CE9CDD7A25797B360020E3E4 /* PlanDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDetailsBuilder.swift; sourceTree = "<group>"; };
+		CE9CDD8825797B6A0020E3E4 /* PlaceDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceDetails.storyboard; sourceTree = "<group>"; };
+		CE9CDD8D25797BDC0020E3E4 /* PlaceDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsPresenter.swift; sourceTree = "<group>"; };
+		CE9CDD8E25797BDC0020E3E4 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		CE9CDD8F25797BDC0020E3E4 /* PlaceDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsBuilder.swift; sourceTree = "<group>"; };
+		CEA4F985257289A100BE472E /* TripLegendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLegendPresenter.swift; sourceTree = "<group>"; };
+		CEA4F988257289AB00BE472E /* TripLegendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLegendViewController.swift; sourceTree = "<group>"; };
+		CEA4F98B257289B500BE472E /* TripLegendBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripLegendBuilder.swift; sourceTree = "<group>"; };
+		CEA4F98F257289CA00BE472E /* TripLegend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripLegend.storyboard; sourceTree = "<group>"; };
+		CEA4F9942572DBC700BE472E /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		CEA4F9992572DC3400BE472E /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		CEA4F99E2572E08900BE472E /* TabBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModel.swift; sourceTree = "<group>"; };
+		CEAC8A732572E52D00BDAD96 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		CEB45734257D3BD7000F12DF /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
+		CEB4573D257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreationNavigatorPresenter.swift; sourceTree = "<group>"; };
+		CEB4573E257D5E2E000F12DF /* TripCreationNavigatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreationNavigatorViewController.swift; sourceTree = "<group>"; };
+		CEB4573F257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreationNavigatorBuilder.swift; sourceTree = "<group>"; };
+		CEB45745257D5E46000F12DF /* TripCreationNavigator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripCreationNavigator.storyboard; sourceTree = "<group>"; };
+		CED7A4D425725C3F006C8BE3 /* TripsHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsHistoryPresenter.swift; sourceTree = "<group>"; };
+		CED7A4D725725C4C006C8BE3 /* TripsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsHistoryViewController.swift; sourceTree = "<group>"; };
+		CED7A4DA25725C8D006C8BE3 /* TripsHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsHistory.storyboard; sourceTree = "<group>"; };
+		CED7A4DE2572628A006C8BE3 /* TripsHistoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsHistoryBuilder.swift; sourceTree = "<group>"; };
+		CED7A4E3257266E3006C8BE3 /* TripsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsService.swift; sourceTree = "<group>"; };
+		CED7A4E7257266EE006C8BE3 /* TripsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsServiceProtocol.swift; sourceTree = "<group>"; };
+		CED7A4EE257267F6006C8BE3 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		CED7A4F8257270C2006C8BE3 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		CED7A4FB2572720E006C8BE3 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		CED7A4FE25727216006C8BE3 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		CED7A50125727228006C8BE3 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		CED7A50425727233006C8BE3 /* ImpressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpressionModel.swift; sourceTree = "<group>"; };
+		CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		CED7A51225728288006C8BE3 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
+		CED7A51725728424006C8BE3 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		CEE5A12D25724E8500E1569A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		CEE5A13025724E8800E1569A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = /Users/andrey.luferau/Documents/tripsPlanner/.swiftlint.yml; sourceTree = "<absolute>"; };
+		CEE5A135257252AA00E1569A /* ViewRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRoutable.swift; sourceTree = "<group>"; };
+		CEE5A13D257255DE00E1569A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D37F71C570AAC8955B879644 /* Pods-tripsPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tripsPlanner.debug.xcconfig"; path = "Target Support Files/Pods-tripsPlanner/Pods-tripsPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +124,159 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FB40E6112CB3BFF74E4EFB /* Pods_tripsPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91BE38C34A495E3AAECF7944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				118D086E54A750188FEFCDD2 /* Pods_tripsPlanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE17229F2571ADBB00AD32A1 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4F9942572DBC700BE472E /* RootBuilder.swift */,
+				CE1722A12571AE0E00AD32A1 /* RootPresenter.swift */,
+				CE1722A42571AE1A00AD32A1 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CE1722A02571ADC000AD32A1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4F9992572DC3400BE472E /* TabBarBuilder.swift */,
+				CE1722A72571AE4100AD32A1 /* TabBarPresenter.swift */,
+				CE1722AA2571AE5300AD32A1 /* TabBarViewController.swift */,
+				CEA4F99E2572E08900BE472E /* TabBarItemViewModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE79F2FA2571B3340081239F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE1722B12571AE9F00AD32A1 /* ViewController.swift */,
+				CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */,
+				CE79F2F72571B32A0081239F /* ViewControllable.swift */,
+				CEE5A135257252AA00E1569A /* ViewRoutable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE7F594D25719D2C00C01F6D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE79F2FA2571B3340081239F /* Common */,
+				CE7F595425719D6700C01F6D /* Launch */,
+				CE7F595525719D8600C01F6D /* Trips */,
+				CE7F595625719D9000C01F6D /* Explore */,
+				CE7F595825719DA500C01F6D /* Statistics */,
+				CE7F595725719D9F00C01F6D /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE7F594F25719D3300C01F6D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A4EE257267F6006C8BE3 /* ServiceContainer.swift */,
+				CED7A4E2257266B0006C8BE3 /* TripsService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE7F595025719D3900C01F6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7F595125719D4500C01F6D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE7F595225719D4D00C01F6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A4F8257270C2006C8BE3 /* TripModel.swift */,
+				CEB45739257D3BFF000F12DF /* TripDetail */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE7F595325719D5200C01F6D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEE5A13D257255DE00E1569A /* Assets.xcassets */,
+				CE9A60EB256BD51700193D24 /* LaunchScreen.storyboard */,
+				CE9A60EE256BD51700193D24 /* Info.plist */,
+				CE9A60E6256BD51400193D24 /* tripsPlanner.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE7F595425719D6700C01F6D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CE17229F2571ADBB00AD32A1 /* Root */,
+				CE1722A02571ADC000AD32A1 /* TabBar */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CE7F595525719D8600C01F6D /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				CE9CDD51257967090020E3E4 /* TripCreationNavigator */,
+				CED7A51A257288CE006C8BE3 /* TripsHistory */,
+				CEA4F9842572897A00BE472E /* TripLegend */,
+				CE9CDD52257972C50020E3E4 /* TripDetails */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		CE7F595625719D9000C01F6D /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		CE7F595725719D9F00C01F6D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE7F595825719DA500C01F6D /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		CE9A60D1256BD51400193D24 = {
 			isa = PBXGroup;
 			children = (
 				CE9A60DC256BD51400193D24 /* tripsPlanner */,
 				CE9A60DB256BD51400193D24 /* Products */,
+				EE171292A303BCE36885CDA6 /* Pods */,
+				91BE38C34A495E3AAECF7944 /* Frameworks */,
+				CEE5A12D25724E8500E1569A /* R.generated.swift */,
+				CEE5A13025724E8800E1569A /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +291,146 @@
 		CE9A60DC256BD51400193D24 /* tripsPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				CE7F594D25719D2C00C01F6D /* Modules */,
+				CE7F594F25719D3300C01F6D /* Services */,
+				CE7F595225719D4D00C01F6D /* Models */,
+				CE7F595125719D4500C01F6D /* ViewModels */,
+				CE7F595025719D3900C01F6D /* Views */,
+				CE7F595325719D5200C01F6D /* Resources */,
+				CED7A516257283B5006C8BE3 /* Extension */,
 				CE9A60DD256BD51400193D24 /* AppDelegate.swift */,
 				CE9A60DF256BD51400193D24 /* SceneDelegate.swift */,
-				CE9A60E1256BD51400193D24 /* ViewController.swift */,
-				CE9A60E3256BD51400193D24 /* Main.storyboard */,
-				CE9A60E9256BD51700193D24 /* Assets.xcassets */,
-				CE9A60EB256BD51700193D24 /* LaunchScreen.storyboard */,
-				CE9A60EE256BD51700193D24 /* Info.plist */,
-				CE9A60E6256BD51400193D24 /* tripsPlanner.xcdatamodeld */,
 			);
 			path = tripsPlanner;
+			sourceTree = "<group>";
+		};
+		CE9CDD51257967090020E3E4 /* TripCreationNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				CEB45745257D5E46000F12DF /* TripCreationNavigator.storyboard */,
+				CEB4573F257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift */,
+				CEB4573D257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift */,
+				CEB4573E257D5E2E000F12DF /* TripCreationNavigatorViewController.swift */,
+			);
+			path = TripCreationNavigator;
+			sourceTree = "<group>";
+		};
+		CE9CDD52257972C50020E3E4 /* TripDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CE9CDD54257972F80020E3E4 /* PlaceDetails */,
+				CE9CDD53257972CD0020E3E4 /* PlanDetails */,
+				CE9CDD56257973110020E3E4 /* ToDoDetails */,
+				CE9CDD55257973030020E3E4 /* ImpressionDetails */,
+			);
+			path = TripDetails;
+			sourceTree = "<group>";
+		};
+		CE9CDD53257972CD0020E3E4 /* PlanDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CE9CDD6A2579788C0020E3E4 /* PlanDetails.storyboard */,
+				CE9CDD7A25797B360020E3E4 /* PlanDetailsBuilder.swift */,
+				CE9CDD7825797B360020E3E4 /* PlanDetailsPresenter.swift */,
+				CE9CDD7925797B360020E3E4 /* PlanDetailsViewController.swift */,
+			);
+			path = PlanDetails;
+			sourceTree = "<group>";
+		};
+		CE9CDD54257972F80020E3E4 /* PlaceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CE9CDD8825797B6A0020E3E4 /* PlaceDetails.storyboard */,
+				CE9CDD8F25797BDC0020E3E4 /* PlaceDetailsBuilder.swift */,
+				CE9CDD8D25797BDC0020E3E4 /* PlaceDetailsPresenter.swift */,
+				CE9CDD8E25797BDC0020E3E4 /* PlaceDetailsViewController.swift */,
+			);
+			path = PlaceDetails;
+			sourceTree = "<group>";
+		};
+		CE9CDD55257973030020E3E4 /* ImpressionDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImpressionDetails;
+			sourceTree = "<group>";
+		};
+		CE9CDD56257973110020E3E4 /* ToDoDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ToDoDetails;
+			sourceTree = "<group>";
+		};
+		CEA4F9842572897A00BE472E /* TripLegend */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4F98F257289CA00BE472E /* TripLegend.storyboard */,
+				CEA4F98B257289B500BE472E /* TripLegendBuilder.swift */,
+				CEA4F985257289A100BE472E /* TripLegendPresenter.swift */,
+				CEA4F988257289AB00BE472E /* TripLegendViewController.swift */,
+				CEAC8A732572E52D00BDAD96 /* TripViewModel.swift */,
+			);
+			path = TripLegend;
+			sourceTree = "<group>";
+		};
+		CEB45739257D3BFF000F12DF /* TripDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CEB45734257D3BD7000F12DF /* TripDetail.swift */,
+				CED7A4FB2572720E006C8BE3 /* PlaceModel.swift */,
+				CED7A4FE25727216006C8BE3 /* PlanModel.swift */,
+				CED7A50125727228006C8BE3 /* ToDoModel.swift */,
+				CED7A50425727233006C8BE3 /* ImpressionModel.swift */,
+			);
+			path = TripDetail;
+			sourceTree = "<group>";
+		};
+		CED7A4E2257266B0006C8BE3 /* TripsService */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A4E7257266EE006C8BE3 /* TripsServiceProtocol.swift */,
+				CED7A4E3257266E3006C8BE3 /* TripsService.swift */,
+			);
+			path = TripsService;
+			sourceTree = "<group>";
+		};
+		CED7A51125728240006C8BE3 /* TripCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */,
+				CED7A51225728288006C8BE3 /* TripCollectionViewCell.swift */,
+			);
+			path = TripCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CED7A516257283B5006C8BE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A51725728424006C8BE3 /* Array+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CED7A51A257288CE006C8BE3 /* TripsHistory */ = {
+			isa = PBXGroup;
+			children = (
+				CED7A51125728240006C8BE3 /* TripCollectionViewCell */,
+				CED7A4DA25725C8D006C8BE3 /* TripsHistory.storyboard */,
+				CED7A4DE2572628A006C8BE3 /* TripsHistoryBuilder.swift */,
+				CED7A4D425725C3F006C8BE3 /* TripsHistoryPresenter.swift */,
+				CED7A4D725725C4C006C8BE3 /* TripsHistoryViewController.swift */,
+			);
+			path = TripsHistory;
+			sourceTree = "<group>";
+		};
+		EE171292A303BCE36885CDA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D37F71C570AAC8955B879644 /* Pods-tripsPlanner.debug.xcconfig */,
+				A59739A2436A4D68FE84E5BF /* Pods-tripsPlanner.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +440,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9A60F1256BD51700193D24 /* Build configuration list for PBXNativeTarget "tripsPlanner" */;
 			buildPhases = (
+				56B7B7A0DC8A0F3A99F55AAE /* [CP] Check Pods Manifest.lock */,
+				CE229A3125724DA8008C6BED /* R Swift */,
 				CE9A60D6256BD51400193D24 /* Sources */,
 				CE9A60D7256BD51400193D24 /* Frameworks */,
 				CE9A60D8256BD51400193D24 /* Resources */,
+				EC1823CC513963B218A1A2F6 /* [CP] Embed Pods Frameworks */,
+				CE1722942571A77A00AD32A1 /* Swiftlint Script */,
 			);
 			buildRules = (
 			);
@@ -127,37 +494,152 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB45746257D5E46000F12DF /* TripCreationNavigator.storyboard in Resources */,
+				CED7A4DB25725C8D006C8BE3 /* TripsHistory.storyboard in Resources */,
+				CEE5A13E257255DE00E1569A /* Assets.xcassets in Resources */,
+				CE9CDD6B2579788C0020E3E4 /* PlanDetails.storyboard in Resources */,
+				CEA4F990257289CA00BE472E /* TripLegend.storyboard in Resources */,
 				CE9A60ED256BD51700193D24 /* LaunchScreen.storyboard in Resources */,
-				CE9A60EA256BD51700193D24 /* Assets.xcassets in Resources */,
-				CE9A60E5256BD51400193D24 /* Main.storyboard in Resources */,
+				CE9CDD8925797B6A0020E3E4 /* PlaceDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56B7B7A0DC8A0F3A99F55AAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tripsPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE1722942571A77A00AD32A1 /* Swiftlint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftlint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		CE229A3125724DA8008C6BED /* R Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		EC1823CC513963B218A1A2F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tripsPlanner/Pods-tripsPlanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tripsPlanner/Pods-tripsPlanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tripsPlanner/Pods-tripsPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE9A60D6256BD51400193D24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9A60E2256BD51400193D24 /* ViewController.swift in Sources */,
+				CED7A4E4257266E3006C8BE3 /* TripsService.swift in Sources */,
+				CED7A4F9257270C2006C8BE3 /* TripModel.swift in Sources */,
+				CE1722A52571AE1A00AD32A1 /* RootViewController.swift in Sources */,
+				CED7A50225727228006C8BE3 /* ToDoModel.swift in Sources */,
+				CEB45741257D5E2E000F12DF /* TripCreationNavigatorViewController.swift in Sources */,
 				CE9A60DE256BD51400193D24 /* AppDelegate.swift in Sources */,
+				CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */,
+				CEB45735257D3BD7000F12DF /* TripDetail.swift in Sources */,
+				CED7A4FF25727216006C8BE3 /* PlanModel.swift in Sources */,
+				CE9CDD7C25797B360020E3E4 /* PlanDetailsViewController.swift in Sources */,
+				CEB45740257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift in Sources */,
+				CE1722A82571AE4100AD32A1 /* TabBarPresenter.swift in Sources */,
+				CE1722AB2571AE5300AD32A1 /* TabBarViewController.swift in Sources */,
+				CE1722B22571AE9F00AD32A1 /* ViewController.swift in Sources */,
+				CED7A4DF2572628A006C8BE3 /* TripsHistoryBuilder.swift in Sources */,
+				CEA4F98C257289B500BE472E /* TripLegendBuilder.swift in Sources */,
+				CEA4F986257289A100BE472E /* TripLegendPresenter.swift in Sources */,
+				CED7A51825728424006C8BE3 /* Array+Extension.swift in Sources */,
+				CE79F2F82571B32A0081239F /* ViewControllable.swift in Sources */,
+				CED7A4D825725C4C006C8BE3 /* TripsHistoryViewController.swift in Sources */,
+				CE9CDD7B25797B360020E3E4 /* PlanDetailsPresenter.swift in Sources */,
+				CED7A50825727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift in Sources */,
+				CEA4F9952572DBC700BE472E /* RootBuilder.swift in Sources */,
 				CE9A60E0256BD51400193D24 /* SceneDelegate.swift in Sources */,
+				CE1722A22571AE0E00AD32A1 /* RootPresenter.swift in Sources */,
+				CE9CDD9025797BDC0020E3E4 /* PlaceDetailsPresenter.swift in Sources */,
+				CEA4F989257289AB00BE472E /* TripLegendViewController.swift in Sources */,
+				CEAC8A742572E52D00BDAD96 /* TripViewModel.swift in Sources */,
+				CE9CDD9225797BDC0020E3E4 /* PlaceDetailsBuilder.swift in Sources */,
+				CED7A50525727233006C8BE3 /* ImpressionModel.swift in Sources */,
+				CEE5A12E25724E8500E1569A /* R.generated.swift in Sources */,
+				CED7A51325728288006C8BE3 /* TripCollectionViewCell.swift in Sources */,
+				CED7A4D525725C3F006C8BE3 /* TripsHistoryPresenter.swift in Sources */,
+				CEA4F99A2572DC3400BE472E /* TabBarBuilder.swift in Sources */,
+				CEE5A136257252AA00E1569A /* ViewRoutable.swift in Sources */,
+				CEA4F99F2572E08900BE472E /* TabBarItemViewModel.swift in Sources */,
+				CEB45742257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift in Sources */,
 				CE9A60E8256BD51400193D24 /* tripsPlanner.xcdatamodeld in Sources */,
+				CED7A4FC2572720E006C8BE3 /* PlaceModel.swift in Sources */,
+				CE9CDD9125797BDC0020E3E4 /* PlaceDetailsViewController.swift in Sources */,
+				CE9CDD7D25797B360020E3E4 /* PlanDetailsBuilder.swift in Sources */,
+				CED7A4E8257266EE006C8BE3 /* TripsServiceProtocol.swift in Sources */,
+				CED7A4EF257267F6006C8BE3 /* ServiceContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE9A60E3256BD51400193D24 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE9A60E4256BD51400193D24 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE9A60EB256BD51700193D24 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,11 +769,12 @@
 		};
 		CE9A60F2256BD51700193D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D37F71C570AAC8955B879644 /* Pods-tripsPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = tripsPlanner/Info.plist;
+				INFOPLIST_FILE = tripsPlanner/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,11 +788,12 @@
 		};
 		CE9A60F3256BD51700193D24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59739A2436A4D68FE84E5BF /* Pods-tripsPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = tripsPlanner/Info.plist;
+				INFOPLIST_FILE = tripsPlanner/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orY-lj-hrQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trips History View Controller-->
+        <scene sceneID="3eT-9V-hCr">
+            <objects>
+                <viewController id="ONR-gM-nbz" customClass="TripsHistoryViewController" customModule="tripsPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vTD-dI-ndY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-IL-4fv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FCQ-sR-fdR">
+                                    <size key="itemSize" width="414" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tripCellIdentifier" id="Dk9-YT-ay6" customClass="TripCollectionViewCell" customModule="tripsPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A53-fL-Psq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtG-QY-NxI">
+                                                    <rect key="frame" x="50" y="50" width="314" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="AtG-QY-NxI" secondAttribute="trailing" constant="50" id="CEN-VI-XYc"/>
+                                                <constraint firstItem="AtG-QY-NxI" firstAttribute="top" secondItem="A53-fL-Psq" secondAttribute="top" constant="50" id="bLg-qb-Xed"/>
+                                                <constraint firstItem="AtG-QY-NxI" firstAttribute="leading" secondItem="A53-fL-Psq" secondAttribute="leading" constant="50" id="wvs-b7-yNK"/>
+                                                <constraint firstAttribute="bottom" secondItem="AtG-QY-NxI" secondAttribute="bottom" constant="50" id="xlQ-u2-Enn"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="128"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="AtG-QY-NxI" id="HNv-Ir-EkB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuW-eO-GoE" userLabel="Add Trip Button">
+                                <rect key="frame" x="314" y="762" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yuW-eO-GoE" secondAttribute="height" multiplier="1:1" id="HpB-X2-krl"/>
+                                    <constraint firstAttribute="width" constant="50" id="aft-Wg-vxv"/>
+                                </constraints>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="tapCreateTripButtonAction:" destination="ONR-gM-nbz" eventType="touchUpInside" id="LhN-eH-wqE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ekJ-8Y-Wt7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9ab-IL-4fv" firstAttribute="top" secondItem="ekJ-8Y-Wt7" secondAttribute="top" id="6pV-dN-89O"/>
+                            <constraint firstItem="ekJ-8Y-Wt7" firstAttribute="trailing" secondItem="9ab-IL-4fv" secondAttribute="trailing" id="Rmf-3W-6iV"/>
+                            <constraint firstItem="ekJ-8Y-Wt7" firstAttribute="bottom" secondItem="9ab-IL-4fv" secondAttribute="bottom" id="Zw8-kj-HQ6"/>
+                            <constraint firstItem="ekJ-8Y-Wt7" firstAttribute="bottom" secondItem="yuW-eO-GoE" secondAttribute="bottom" constant="50" id="aNt-3G-eyT"/>
+                            <constraint firstItem="9ab-IL-4fv" firstAttribute="leading" secondItem="ekJ-8Y-Wt7" secondAttribute="leading" id="dhv-vS-pmN"/>
+                            <constraint firstItem="ekJ-8Y-Wt7" firstAttribute="trailing" secondItem="yuW-eO-GoE" secondAttribute="trailing" constant="50" id="wIW-Kb-Chi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b5V-f3-5mT"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="addTripButton" destination="yuW-eO-GoE" id="4Lb-Ue-e3h"/>
+                        <outlet property="tripsCollectionView" destination="9ab-IL-4fv" id="ryO-zj-CAd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mct-iB-Npe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q86-GB-kCl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="orY-lj-hrQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T6v-fc-88J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ONR-gM-nbz" kind="relationship" relationship="rootViewController" id="aNs-1o-Qtj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3r0-Nh-Php" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
