@@ -10,7 +10,8 @@ import UIKit
 protocol SideBarViewControllable: ViewControllable {
     var presenter: SideBarPresenterInteractable? { get set }
 
-    func applyInitialSnapshots(data: [(menuItem: RootMenuItem, childOptions: [String])])
+    func applyInitialSnapshots(menuListData: [RootMenuItem], collapsedMenuListItem: RootMenuItem, collapsedMenuListData: [String])
+    func selectItem(with indexPath: IndexPath)
 }
 
 protocol SideBarViewRoutable: ViewRoutable {
@@ -21,14 +22,14 @@ final class SideBarViewController: ViewController {
     var presenter: SideBarPresenterInteractable?
 
     enum Section: Int, Hashable, CaseIterable, CustomStringConvertible {
-        case menuList, collapsedMenuItemList
+        case menuList, collapsedMenuList
 
         var description: String {
             switch self {
             case .menuList:
                 return "MenuList"
-            case .collapsedMenuItemList:
-                return "CollapsedMenuItemList"
+            case .collapsedMenuList:
+                return "CollapsedMenuList"
             }
         }
     }
@@ -46,29 +47,30 @@ final class SideBarViewController: ViewController {
 }
 
 extension SideBarViewController: SideBarViewControllable {
-    func applyInitialSnapshots(data: [(menuItem: RootMenuItem, childOptions: [String])]) {
+    func applyInitialSnapshots(menuListData: [RootMenuItem], collapsedMenuListItem: RootMenuItem, collapsedMenuListData: [String]) {
         let sections = Section.allCases
         var snapshot = NSDiffableDataSourceSnapshot<Section, SideBarItemViewModel>()
         snapshot.appendSections(sections)
         dataSource?.apply(snapshot, animatingDifferences: false)
 
-        var menuListSnapshot = NSDiffableDataSourceSectionSnapshot<SideBarItemViewModel>()
-        for dataItem in data {
-            let rootMenuItemViewModel = RootMenuItemViewModel(tabBarItem: dataItem.menuItem)
-            if dataItem.childOptions.isEmpty {
-                let item = SideBarItemViewModel(title: rootMenuItemViewModel.title, image: rootMenuItemViewModel.image, hasChildOptions: false)
-                menuListSnapshot.append([item])
-            } else {
-                var collapsedMenuItemListSnapshot = NSDiffableDataSourceSectionSnapshot<SideBarItemViewModel>()
-                let rootItem = SideBarItemViewModel(title: rootMenuItemViewModel.title, image: rootMenuItemViewModel.image, hasChildOptions: true)
-                collapsedMenuItemListSnapshot.append([rootItem])
-                let childItems = dataItem.childOptions.map { SideBarItemViewModel(title: $0, hasChildOptions: false) }
-                collapsedMenuItemListSnapshot.append(childItems, to: rootItem)
-                dataSource?.apply(collapsedMenuItemListSnapshot, to: .collapsedMenuItemList)
-            }
-        }
 
+        var menuListSnapshot = NSDiffableDataSourceSectionSnapshot<SideBarItemViewModel>()
+        menuListSnapshot.append(menuListData
+                                    .map { RootMenuItemViewModel(menuItem: $0) }
+                                    .map { SideBarItemViewModel(title: $0.title, image: $0.image, hasChildOptions: false) })
         dataSource?.apply(menuListSnapshot, to: .menuList)
+
+        var collapsedMenuItemListSnapshot = NSDiffableDataSourceSectionSnapshot<SideBarItemViewModel>()
+        let rootMenuItemViewModel = RootMenuItemViewModel(menuItem: collapsedMenuListItem)
+        let rootItem = SideBarItemViewModel(title: rootMenuItemViewModel.title, image: rootMenuItemViewModel.image, hasChildOptions: true)
+        collapsedMenuItemListSnapshot.append([rootItem])
+        let childItems = collapsedMenuListData.map { SideBarItemViewModel(title: $0, hasChildOptions: false) }
+        collapsedMenuItemListSnapshot.append(childItems, to: rootItem)
+        dataSource?.apply(collapsedMenuItemListSnapshot, to: .collapsedMenuList)
+    }
+
+    func selectItem(with indexPath: IndexPath) {
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
     }
 }
 
@@ -78,19 +80,13 @@ extension SideBarViewController: SideBarViewRoutable {
 
 extension SideBarViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let _ = dataSource?.itemIdentifier(for: indexPath) else {
-            collectionView.deselectItem(at: indexPath, animated: true)
-            return
-        }
-
-        //TODO: handle tap on side bar option
+        presenter?.selectMenuOptionAction(with: indexPath)
     }
 }
 
 private extension SideBarViewController {
     func setupUI() {
         navigationItem.title = NSLocalizedString("Menu", comment: "")
-        navigationItem.largeTitleDisplayMode = .always
 
         setupCollectionViewLayout()
         collectionView.delegate = self
@@ -111,7 +107,7 @@ private extension SideBarViewController {
             switch section {
             case .menuList:
                 return collectionView.dequeueConfiguredReusableCell(using: self.configuredMenuCell(), for: indexPath, item: item)
-            case .collapsedMenuItemList:
+            case .collapsedMenuList:
                 if item.hasChildOptions {
                     return collectionView.dequeueConfiguredReusableCell(using: self.configuredCollapsedItemHeader(), for: indexPath, item: item)
                 } else {

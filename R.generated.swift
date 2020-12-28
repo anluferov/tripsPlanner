@@ -372,8 +372,8 @@ struct _R: Rswift.Validatable {
       let name = "TripLegend"
 
       static func validate() throws {
-        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "square.and.pencil") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'square.and.pencil' is used in storyboard 'TripLegend', but couldn't be loaded.") } }
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "plus") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'plus' is used in storyboard 'TripLegend', but couldn't be loaded.") } }
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "square.and.pencil") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'square.and.pencil' is used in storyboard 'TripLegend', but couldn't be loaded.") } }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

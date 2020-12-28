@@ -12,8 +12,8 @@ protocol SplitViewControllable: ViewControllable {
 }
 
 protocol SplitViewRoutable: ViewRoutable {
-//    func embedSplitScreens(primary: UIViewController, supplementary: UIViewController, secondary: UIViewController, compact: UIViewController)
-    func embedSplitScreens(primary: UIViewController, secondary: UIViewController, compact: UIViewController)
+    func embedSplitScreens(primary: UIViewController, compact: UIViewController)
+    func embedSecondarySplitScreen(_ secondary: ViewController)
 }
 
 final class SplitViewController: UISplitViewController, SplitViewControllable {
@@ -27,18 +27,20 @@ final class SplitViewController: UISplitViewController, SplitViewControllable {
 }
 
 extension SplitViewController: SplitViewRoutable {
-//    func embedSplitScreens(primary: UIViewController, supplementary: UIViewController, secondary: UIViewController, compact: UIViewController) {
+    func embedSplitScreens(primary: UIViewController, compact: UIViewController) {
+        setViewController(primary, for: .primary)
+        setViewController(compact, for: .compact)
+    }
+
+    func embedSecondarySplitScreen(_ secondary: ViewController) {
+        setViewController(secondary, for: .secondary)
+    }
+
+//    func embedSplitScreens(primary: UIViewController, secondary: UIViewController, compact: UIViewController) {
 //        setViewController(primary, for: .primary)
-//        setViewController(supplementary, for: .supplementary)
 //        setViewController(secondary, for: .secondary)
 //        setViewController(compact, for: .compact)
 //    }
-
-    func embedSplitScreens(primary: UIViewController, secondary: UIViewController, compact: UIViewController) {
-        setViewController(primary, for: .primary)
-        setViewController(secondary, for: .secondary)
-        setViewController(compact, for: .compact)
-    }
 }
 
 private extension SplitViewController {

@@ -21,8 +21,20 @@ final class SplitPresenter {
 
 extension SplitPresenter: SplitPresenterInteractable {
     func viewDidLoad() {
-        view?.embedSplitScreens(primary: SideBarBuilder.build(),
-                                secondary: TripLegendBuilder.build(trip: ServiceContainer.shared.tripsService.tripItems[0]),
-                                compact: TabBarBuilder.build())
+        view?.embedSplitScreens(primary: SideBarBuilder.build(delegate: self), compact: TabBarBuilder.build())
+    }
+}
+
+extension SplitPresenter: SideBarDelegate {
+    func didSelectMenuOption(_ item: RootMenuItem, selectedTrip: TripModel?) {
+        switch item {
+        case .trips:
+            guard let tripModel = selectedTrip else {
+                return
+            }
+            view?.embedSecondarySplitScreen(TripLegendBuilder.build(trip: tripModel))
+        case .explore, .statistics, .profile:
+            view?.embedSecondarySplitScreen(ViewController())
+        }
     }
 }

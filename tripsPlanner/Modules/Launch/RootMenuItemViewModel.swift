@@ -12,8 +12,8 @@ struct RootMenuItemViewModel: Hashable {
     let image: UIImage?
     let selectedImage: UIImage?
 
-    init(tabBarItem: RootMenuItem) {
-        switch tabBarItem {
+    init(menuItem: RootMenuItem) {
+        switch menuItem {
         case .trips:
             title = "Trips"
             image = UIImage(systemName: "text.alignleft")

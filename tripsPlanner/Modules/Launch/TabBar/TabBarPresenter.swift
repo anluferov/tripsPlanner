@@ -17,7 +17,7 @@ final class TabBarPresenter {
 
 extension TabBarPresenter: TabBarPresenterInteractable {
     func viewDidLoad() {
-        let viewModels = RootMenuItem.allCases.map { RootMenuItemViewModel(tabBarItem: $0) }
+        let viewModels = RootMenuItem.allCases.map { RootMenuItemViewModel(menuItem: $0) }
         let childViewControllers = [TripsHistoryBuilder.build(), ViewController(), ViewController(), ViewController()]
         view?.embedTabBarScreens(childViewControllers, tabBarItems: viewModels)
     }
