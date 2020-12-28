@@ -13,7 +13,7 @@ class TripsService: TripsServiceProtocol {
     var tripItems: [TripModel] = []
 
     init() {
-//        tripItems = prepareTripsMockData()
+        tripItems = prepareTripsMockData()
     }
 
     func saveTrip(_ tripModel: TripModel) {
@@ -31,21 +31,21 @@ class TripsService: TripsServiceProtocol {
 
 private extension TripsService {
     //TODO: mock data temporary decision
-//    func prepareTripsMockData() -> [TripModel] {
-//
-//        let milanPlans = [PlanModel(name: "Hotel near canal", type: .accommodation), PlanModel(name: "Check in rent car", type: .car)]
-//        let romePlans = [PlanModel(name: "Hotel in center", type: .accommodation), PlanModel(name: "Check out rent car", type: .car)]
-//        let globalItalyPlans = [PlanModel(name: "Flight to Italy", type: .flight), PlanModel(name: "Flight from Italy", type: .flight)]
-//        let italyTrip = TripModel(name: "Italy Trip",
-//                                  placeItems: [PlaceModel(name: "Milan", plans: milanPlans), PlaceModel(name: "Rome", plans: romePlans)],
-//                                  planItems: globalItalyPlans)
-//
-//        let budvaPlans = [PlanModel(name: "Hotel in Budva", type: .accommodation), PlanModel(name: "Rent car", type: .car)]
-//        let globalMontenegroPlans = [PlanModel(name: "Flight to Montenegro", type: .flight), PlanModel(name: "Flight from Montenegro", type: .flight)]
-//        let montenegroTrip = TripModel(name: "Montenegro Trip",
-//                                       placeItems: [PlaceModel(name: "Budva", plans: budvaPlans)],
-//                                       planItems: globalMontenegroPlans)
-//
-//        return [italyTrip, montenegroTrip]
-//    }
+    func prepareTripsMockData() -> [TripModel] {
+
+        let milanPlans = [PlanModel(name: "Hotel near canal", type: .accommodation), PlanModel(name: "Check in rent car", type: .car)]
+        let romePlans = [PlanModel(name: "Hotel in center", type: .accommodation), PlanModel(name: "Check out rent car", type: .car)]
+        let globalItalyPlans = [PlanModel(name: "Flight to Italy", type: .flight), PlanModel(name: "Flight from Italy", type: .flight)]
+        let italyTrip = TripModel(name: "Italy Trip",
+                                  places: [PlaceModel(name: "Milan", plans: milanPlans), PlaceModel(name: "Rome", plans: romePlans)],
+                                  plans: globalItalyPlans)
+
+        let budvaPlans = [PlanModel(name: "Hotel in Budva", type: .accommodation), PlanModel(name: "Rent car", type: .car)]
+        let globalMontenegroPlans = [PlanModel(name: "Flight to Montenegro", type: .flight), PlanModel(name: "Flight from Montenegro", type: .flight)]
+        let montenegroTrip = TripModel(name: "Montenegro Trip",
+                                       places: [PlaceModel(name: "Budva", plans: budvaPlans)],
+                                       plans: globalMontenegroPlans)
+
+        return [italyTrip, montenegroTrip]
+    }
 }

@@ -89,7 +89,7 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
@@ -97,6 +97,8 @@ struct R: Rswift.Validatable {
     static let placeDetails = _R.storyboard.placeDetails()
     /// Storyboard `PlanDetails`.
     static let planDetails = _R.storyboard.planDetails()
+    /// Storyboard `SideBar`.
+    static let sideBar = _R.storyboard.sideBar()
     /// Storyboard `TripCreationNavigator`.
     static let tripCreationNavigator = _R.storyboard.tripCreationNavigator()
     /// Storyboard `TripLegend`.
@@ -126,6 +128,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "SideBar", bundle: ...)`
+    static func sideBar(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.sideBar)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "TripCreationNavigator", bundle: ...)`
     static func tripCreationNavigator(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.tripCreationNavigator)
@@ -150,10 +159,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 3 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `illuminating`.
+    static let illuminating = Rswift.ColorResource(bundle: R.hostingBundle, name: "illuminating")
+    /// Color `ultimateGray`.
+    static let ultimateGray = Rswift.ColorResource(bundle: R.hostingBundle, name: "ultimateGray")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -164,45 +177,21 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    fileprivate init() {}
-  }
-
-  /// This `R.image` struct is generated, and contains static references to 4 images.
-  struct image {
-    /// Image `explore`.
-    static let explore = Rswift.ImageResource(bundle: R.hostingBundle, name: "explore")
-    /// Image `profile`.
-    static let profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "profile")
-    /// Image `statistics`.
-    static let statistics = Rswift.ImageResource(bundle: R.hostingBundle, name: "statistics")
-    /// Image `trips`.
-    static let trips = Rswift.ImageResource(bundle: R.hostingBundle, name: "trips")
-
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "explore", bundle: ..., traitCollection: ...)`
-    static func explore(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.explore, compatibleWith: traitCollection)
+    /// `UIColor(named: "illuminating", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func illuminating(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.illuminating, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "profile", bundle: ..., traitCollection: ...)`
-    static func profile(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.profile, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "statistics", bundle: ..., traitCollection: ...)`
-    static func statistics(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.statistics, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "trips", bundle: ..., traitCollection: ...)`
-    static func trips(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.trips, compatibleWith: traitCollection)
+    /// `UIColor(named: "ultimateGray", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func ultimateGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.ultimateGray, compatibleWith: traitCollection)
     }
     #endif
 
@@ -280,6 +269,9 @@ struct _R: Rswift.Validatable {
       try planDetails.validate()
       #endif
       #if os(iOS) || os(tvOS)
+      try sideBar.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try tripCreationNavigator.validate()
       #endif
       #if os(iOS) || os(tvOS)
@@ -332,6 +324,22 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "square.and.pencil") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'square.and.pencil' is used in storyboard 'PlanDetails', but couldn't be loaded.") } }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    struct sideBar: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = SideBarViewController
+
+      let bundle = R.hostingBundle
+      let name = "SideBar"
+
+      static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

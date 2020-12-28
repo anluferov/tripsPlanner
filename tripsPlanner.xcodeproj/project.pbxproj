@@ -15,6 +15,13 @@
 		CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */; };
 		CE1722B22571AE9F00AD32A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722B12571AE9F00AD32A1 /* ViewController.swift */; };
 		CE79F2F82571B32A0081239F /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79F2F72571B32A0081239F /* ViewControllable.swift */; };
+		CE88C3EA2588082800EEE24B /* SplitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E72588082800EEE24B /* SplitPresenter.swift */; };
+		CE88C3EB2588082800EEE24B /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E82588082800EEE24B /* SplitViewController.swift */; };
+		CE88C3EC2588082800EEE24B /* SplitBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E92588082800EEE24B /* SplitBuilder.swift */; };
+		CE88C3F2258808D000EEE24B /* SideBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3EF258808D000EEE24B /* SideBarPresenter.swift */; };
+		CE88C3F3258808D000EEE24B /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3F0258808D000EEE24B /* SideBarViewController.swift */; };
+		CE88C3F4258808D000EEE24B /* SideBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3F1258808D000EEE24B /* SideBarBuilder.swift */; };
+		CE88C3F72588097600EEE24B /* SideBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE88C3F62588097600EEE24B /* SideBar.storyboard */; };
 		CE9A60DE256BD51400193D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60DD256BD51400193D24 /* AppDelegate.swift */; };
 		CE9A60E0256BD51400193D24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60DF256BD51400193D24 /* SceneDelegate.swift */; };
 		CE9A60E8256BD51400193D24 /* tripsPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9A60E6256BD51400193D24 /* tripsPlanner.xcdatamodeld */; };
@@ -33,7 +40,7 @@
 		CEA4F990257289CA00BE472E /* TripLegend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA4F98F257289CA00BE472E /* TripLegend.storyboard */; };
 		CEA4F9952572DBC700BE472E /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F9942572DBC700BE472E /* RootBuilder.swift */; };
 		CEA4F99A2572DC3400BE472E /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F9992572DC3400BE472E /* TabBarBuilder.swift */; };
-		CEA4F99F2572E08900BE472E /* TabBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F99E2572E08900BE472E /* TabBarItemViewModel.swift */; };
+		CEA4F99F2572E08900BE472E /* RootMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F99E2572E08900BE472E /* RootMenuItemViewModel.swift */; };
 		CEAC8A742572E52D00BDAD96 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8A732572E52D00BDAD96 /* TripViewModel.swift */; };
 		CEB45735257D3BD7000F12DF /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45734257D3BD7000F12DF /* TripDetail.swift */; };
 		CEB45740257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4573D257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift */; };
@@ -55,6 +62,8 @@
 		CED7A50825727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */; };
 		CED7A51325728288006C8BE3 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A51225728288006C8BE3 /* TripCollectionViewCell.swift */; };
 		CED7A51825728424006C8BE3 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7A51725728424006C8BE3 /* Array+Extension.swift */; };
+		CED9832A259A224200B2E4A3 /* RootMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED98329259A224200B2E4A3 /* RootMenuItem.swift */; };
+		CED9832E259A230700B2E4A3 /* SideBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9832D259A230700B2E4A3 /* SideBarItemViewModel.swift */; };
 		CEE5A12E25724E8500E1569A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5A12D25724E8500E1569A /* R.generated.swift */; };
 		CEE5A136257252AA00E1569A /* ViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5A135257252AA00E1569A /* ViewRoutable.swift */; };
 		CEE5A13E257255DE00E1569A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE5A13D257255DE00E1569A /* Assets.xcassets */; };
@@ -70,6 +79,13 @@
 		CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInteractable.swift; sourceTree = "<group>"; };
 		CE1722B12571AE9F00AD32A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE79F2F72571B32A0081239F /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
+		CE88C3E72588082800EEE24B /* SplitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitPresenter.swift; sourceTree = "<group>"; };
+		CE88C3E82588082800EEE24B /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		CE88C3E92588082800EEE24B /* SplitBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBuilder.swift; sourceTree = "<group>"; };
+		CE88C3EF258808D000EEE24B /* SideBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarPresenter.swift; sourceTree = "<group>"; };
+		CE88C3F0258808D000EEE24B /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		CE88C3F1258808D000EEE24B /* SideBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarBuilder.swift; sourceTree = "<group>"; };
+		CE88C3F62588097600EEE24B /* SideBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideBar.storyboard; sourceTree = "<group>"; };
 		CE9A60DA256BD51400193D24 /* tripsPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tripsPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9A60DD256BD51400193D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9A60DF256BD51400193D24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +106,7 @@
 		CEA4F98F257289CA00BE472E /* TripLegend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripLegend.storyboard; sourceTree = "<group>"; };
 		CEA4F9942572DBC700BE472E /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		CEA4F9992572DC3400BE472E /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
-		CEA4F99E2572E08900BE472E /* TabBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModel.swift; sourceTree = "<group>"; };
+		CEA4F99E2572E08900BE472E /* RootMenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMenuItemViewModel.swift; sourceTree = "<group>"; };
 		CEAC8A732572E52D00BDAD96 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		CEB45734257D3BD7000F12DF /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		CEB4573D257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreationNavigatorPresenter.swift; sourceTree = "<group>"; };
@@ -112,6 +128,8 @@
 		CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		CED7A51225728288006C8BE3 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
 		CED7A51725728424006C8BE3 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		CED98329259A224200B2E4A3 /* RootMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMenuItem.swift; sourceTree = "<group>"; };
+		CED9832D259A230700B2E4A3 /* SideBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarItemViewModel.swift; sourceTree = "<group>"; };
 		CEE5A12D25724E8500E1569A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CEE5A13025724E8800E1569A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = /Users/andrey.luferau/Documents/tripsPlanner/.swiftlint.yml; sourceTree = "<absolute>"; };
 		CEE5A135257252AA00E1569A /* ViewRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRoutable.swift; sourceTree = "<group>"; };
@@ -155,7 +173,6 @@
 				CEA4F9992572DC3400BE472E /* TabBarBuilder.swift */,
 				CE1722A72571AE4100AD32A1 /* TabBarPresenter.swift */,
 				CE1722AA2571AE5300AD32A1 /* TabBarViewController.swift */,
-				CEA4F99E2572E08900BE472E /* TabBarItemViewModel.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -231,7 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				CE17229F2571ADBB00AD32A1 /* Root */,
+				CE88C3EE258808B400EEE24B /* SideBar */,
+				CE88C3E62588080300EEE24B /* SplitViewController */,
 				CE1722A02571ADC000AD32A1 /* TabBar */,
+				CED98329259A224200B2E4A3 /* RootMenuItem.swift */,
+				CEA4F99E2572E08900BE472E /* RootMenuItemViewModel.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -266,6 +287,28 @@
 			children = (
 			);
 			path = Statistics;
+			sourceTree = "<group>";
+		};
+		CE88C3E62588080300EEE24B /* SplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE88C3E92588082800EEE24B /* SplitBuilder.swift */,
+				CE88C3E72588082800EEE24B /* SplitPresenter.swift */,
+				CE88C3E82588082800EEE24B /* SplitViewController.swift */,
+			);
+			path = SplitViewController;
+			sourceTree = "<group>";
+		};
+		CE88C3EE258808B400EEE24B /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE88C3F62588097600EEE24B /* SideBar.storyboard */,
+				CE88C3F1258808D000EEE24B /* SideBarBuilder.swift */,
+				CE88C3EF258808D000EEE24B /* SideBarPresenter.swift */,
+				CE88C3F0258808D000EEE24B /* SideBarViewController.swift */,
+				CED9832D259A230700B2E4A3 /* SideBarItemViewModel.swift */,
+			);
+			path = SideBar;
 			sourceTree = "<group>";
 		};
 		CE9A60D1256BD51400193D24 = {
@@ -497,6 +540,7 @@
 				CEB45746257D5E46000F12DF /* TripCreationNavigator.storyboard in Resources */,
 				CED7A4DB25725C8D006C8BE3 /* TripsHistory.storyboard in Resources */,
 				CEE5A13E257255DE00E1569A /* Assets.xcassets in Resources */,
+				CE88C3F72588097600EEE24B /* SideBar.storyboard in Resources */,
 				CE9CDD6B2579788C0020E3E4 /* PlanDetails.storyboard in Resources */,
 				CEA4F990257289CA00BE472E /* TripLegend.storyboard in Resources */,
 				CE9A60ED256BD51700193D24 /* LaunchScreen.storyboard in Resources */,
@@ -595,18 +639,22 @@
 				CED7A4F9257270C2006C8BE3 /* TripModel.swift in Sources */,
 				CE1722A52571AE1A00AD32A1 /* RootViewController.swift in Sources */,
 				CED7A50225727228006C8BE3 /* ToDoModel.swift in Sources */,
+				CE88C3F4258808D000EEE24B /* SideBarBuilder.swift in Sources */,
 				CEB45741257D5E2E000F12DF /* TripCreationNavigatorViewController.swift in Sources */,
+				CE88C3EB2588082800EEE24B /* SplitViewController.swift in Sources */,
 				CE9A60DE256BD51400193D24 /* AppDelegate.swift in Sources */,
 				CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */,
 				CEB45735257D3BD7000F12DF /* TripDetail.swift in Sources */,
 				CED7A4FF25727216006C8BE3 /* PlanModel.swift in Sources */,
 				CE9CDD7C25797B360020E3E4 /* PlanDetailsViewController.swift in Sources */,
 				CEB45740257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift in Sources */,
+				CE88C3F2258808D000EEE24B /* SideBarPresenter.swift in Sources */,
 				CE1722A82571AE4100AD32A1 /* TabBarPresenter.swift in Sources */,
 				CE1722AB2571AE5300AD32A1 /* TabBarViewController.swift in Sources */,
 				CE1722B22571AE9F00AD32A1 /* ViewController.swift in Sources */,
 				CED7A4DF2572628A006C8BE3 /* TripsHistoryBuilder.swift in Sources */,
 				CEA4F98C257289B500BE472E /* TripLegendBuilder.swift in Sources */,
+				CED9832E259A230700B2E4A3 /* SideBarItemViewModel.swift in Sources */,
 				CEA4F986257289A100BE472E /* TripLegendPresenter.swift in Sources */,
 				CED7A51825728424006C8BE3 /* Array+Extension.swift in Sources */,
 				CE79F2F82571B32A0081239F /* ViewControllable.swift in Sources */,
@@ -618,15 +666,19 @@
 				CE1722A22571AE0E00AD32A1 /* RootPresenter.swift in Sources */,
 				CE9CDD9025797BDC0020E3E4 /* PlaceDetailsPresenter.swift in Sources */,
 				CEA4F989257289AB00BE472E /* TripLegendViewController.swift in Sources */,
+				CED9832A259A224200B2E4A3 /* RootMenuItem.swift in Sources */,
+				CE88C3EC2588082800EEE24B /* SplitBuilder.swift in Sources */,
 				CEAC8A742572E52D00BDAD96 /* TripViewModel.swift in Sources */,
+				CE88C3F3258808D000EEE24B /* SideBarViewController.swift in Sources */,
 				CE9CDD9225797BDC0020E3E4 /* PlaceDetailsBuilder.swift in Sources */,
 				CED7A50525727233006C8BE3 /* ImpressionModel.swift in Sources */,
 				CEE5A12E25724E8500E1569A /* R.generated.swift in Sources */,
+				CE88C3EA2588082800EEE24B /* SplitPresenter.swift in Sources */,
 				CED7A51325728288006C8BE3 /* TripCollectionViewCell.swift in Sources */,
 				CED7A4D525725C3F006C8BE3 /* TripsHistoryPresenter.swift in Sources */,
 				CEA4F99A2572DC3400BE472E /* TabBarBuilder.swift in Sources */,
 				CEE5A136257252AA00E1569A /* ViewRoutable.swift in Sources */,
-				CEA4F99F2572E08900BE472E /* TabBarItemViewModel.swift in Sources */,
+				CEA4F99F2572E08900BE472E /* RootMenuItemViewModel.swift in Sources */,
 				CEB45742257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift in Sources */,
 				CE9A60E8256BD51400193D24 /* tripsPlanner.xcdatamodeld in Sources */,
 				CED7A4FC2572720E006C8BE3 /* PlaceModel.swift in Sources */,

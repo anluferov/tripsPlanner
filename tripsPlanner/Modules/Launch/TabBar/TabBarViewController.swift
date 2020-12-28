@@ -12,7 +12,7 @@ protocol TabBarViewControllable: ViewControllable {
 }
 
 protocol TabBarViewRoutable: ViewRoutable {
-    func embedTabBarScreens(_ viewControllers: [ViewController], tabBarItems: [TabBarItemViewModel])
+    func embedTabBarScreens(_ viewControllers: [ViewController], tabBarItems: [RootMenuItemViewModel])
 }
 
 final class TabBarViewController: UITabBarController, TabBarViewControllable {
@@ -21,13 +21,14 @@ final class TabBarViewController: UITabBarController, TabBarViewControllable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //TODO: think how to set this in Builder
         presenter.view = self
         presenter.viewDidLoad()
     }
 }
 
 extension TabBarViewController: TabBarViewRoutable {
-    func embedTabBarScreens(_ viewControllers: [ViewController], tabBarItems: [TabBarItemViewModel]) {
+    func embedTabBarScreens(_ viewControllers: [ViewController], tabBarItems: [RootMenuItemViewModel]) {
         for (viewController, viewModel) in zip(viewControllers, tabBarItems) {
             let tabBarItem = UITabBarItem(title: viewModel.title, image: viewModel.image, selectedImage: viewModel.selectedImage)
             viewController.tabBarItem = tabBarItem

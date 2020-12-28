@@ -21,6 +21,6 @@ final class RootPresenter {
 
 extension RootPresenter: RootPresenterInteractable {
     func viewDidLoad() {
-        view?.embed(TabBarBuilder.build())
+        view?.embed(SplitBuilder.build())
     }
 }
