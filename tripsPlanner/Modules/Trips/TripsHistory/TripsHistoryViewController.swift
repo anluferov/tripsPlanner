@@ -64,6 +64,14 @@ extension TripsHistoryViewController: UICollectionViewDelegate {
     }
 }
 
+extension TripsHistoryViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 200.0)
+    }
+}
+
 extension TripsHistoryViewController: TripsHistoryViewControllable {
     func update(viewModels: [TripCollectionViewCellViewModel]) {
         tripsViewModels = viewModels
@@ -89,7 +97,20 @@ private extension TripsHistoryViewController {
     func setupUI() {
         addTripButton.backgroundColor = .blue
 
-        tripsCollectionView.dataSource = self
-        tripsCollectionView.delegate = self
+        view.backgroundColor = .white
+        tripsCollectionView.backgroundColor = .white
+
+        addTripButton.layer.cornerRadius = 20.0
+        addTripButton.backgroundColor = R.color.ultimateGray()
+        addTripButton.applyDefaultShadow()
+    }
+}
+
+extension UIView {
+    func applyDefaultShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = CGSize(width: 0, height: 10)
+        layer.shadowRadius = 16.0
     }
 }

@@ -444,8 +444,8 @@
 		CED7A51125728240006C8BE3 /* TripCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */,
 				CED7A51225728288006C8BE3 /* TripCollectionViewCell.swift */,
+				CED7A50725727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift */,
 			);
 			path = TripCollectionViewCell;
 			sourceTree = "<group>";
