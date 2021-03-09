@@ -100,9 +100,6 @@ private extension TripsHistoryViewController {
         view.backgroundColor = .white
         tripsCollectionView.backgroundColor = .white
 
-        tripsCollectionView.dataSource = self
-        tripsCollectionView.delegate = self
-
         addTripButton.layer.cornerRadius = 20.0
         addTripButton.backgroundColor = R.color.ultimateGray()
         addTripButton.applyDefaultShadow()

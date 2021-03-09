@@ -62,6 +62,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ONR-gM-nbz" id="ex1-aX-byk"/>
+                                    <outlet property="delegate" destination="ONR-gM-nbz" id="1cH-KN-tWJ"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuW-eO-GoE" userLabel="Add Trip Button">
                                 <rect key="frame" x="314" y="762" width="50" height="50"/>
