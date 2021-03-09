@@ -97,20 +97,9 @@ private extension TripsHistoryViewController {
     func setupUI() {
         addTripButton.backgroundColor = .blue
 
-        view.backgroundColor = .white
-        tripsCollectionView.backgroundColor = .white
+        view.backgroundColor = R.color.ultimateGray()?.withAlphaComponent(0.1)
+        tripsCollectionView.backgroundColor = R.color.ultimateGray()?.withAlphaComponent(0.1)
 
-        addTripButton.layer.cornerRadius = 20.0
-        addTripButton.backgroundColor = R.color.ultimateGray()
-        addTripButton.applyDefaultShadow()
-    }
-}
-
-extension UIView {
-    func applyDefaultShadow() {
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.2
-        layer.shadowOffset = CGSize(width: 0, height: 10)
-        layer.shadowRadius = 16.0
+        addTripButton.applyDefaultButtonStyle()
     }
 }

@@ -24,6 +24,13 @@ final class TabBarViewController: UITabBarController, TabBarViewControllable {
         //TODO: think how to set this in Builder
         presenter.view = self
         presenter.viewDidLoad()
+
+        tabBar.layer.masksToBounds = true
+        tabBar.layer.cornerRadius = 12
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+        tabBar.isTranslucent = true
+        tabBar.barStyle = UIBarStyle.default
     }
 }
 

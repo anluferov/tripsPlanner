@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripCreationBasicInfoView" customModule="tripsPlanner" customModuleProvider="target">
+            <connections>
+                <outlet property="endDateTripField" destination="v6q-af-LQV" id="ecz-GO-pBp"/>
+                <outlet property="startDateTripField" destination="lZA-23-kYt" id="KYI-Jt-bdl"/>
+                <outlet property="titleLabel" destination="bQ5-dU-9iw" id="SMw-ks-YI8"/>
+                <outlet property="tripTitleTextView" destination="StG-Qz-xKL" id="8sk-E9-yFV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ5-dU-9iw" userLabel="Title Label">
+                    <rect key="frame" x="20" y="20" width="374" height="170"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="frF-84-gsM">
+                    <rect key="frame" x="20" y="210" width="374" height="170"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StG-Qz-xKL" userLabel="Trip Title Text Field" customClass="UnderlinedTextField" customModule="tripsPlanner" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="82E-DC-JOI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZA-23-kYt" userLabel="Trip Start Date View" customClass="UnderlinedDateField" customModule="tripsPlanner" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="QTB-AG-OTf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6q-af-LQV" userLabel="Trip End Date View" customClass="UnderlinedDateField" customModule="tripsPlanner" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Ngo-IF-XC4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="frF-84-gsM" secondAttribute="bottom" constant="20" id="1TF-JW-glV"/>
+                <constraint firstItem="bQ5-dU-9iw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="5wl-2M-oAg"/>
+                <constraint firstItem="frF-84-gsM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Jqb-rP-IVN"/>
+                <constraint firstItem="bQ5-dU-9iw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="KYW-CE-bHU"/>
+                <constraint firstAttribute="trailing" secondItem="frF-84-gsM" secondAttribute="trailing" constant="20" id="PfQ-Cz-dmq"/>
+                <constraint firstAttribute="trailing" secondItem="bQ5-dU-9iw" secondAttribute="trailing" constant="20" id="hzm-zU-g6r"/>
+                <constraint firstItem="frF-84-gsM" firstAttribute="top" secondItem="bQ5-dU-9iw" secondAttribute="bottom" constant="20" id="rQz-gR-SUT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130" y="95"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

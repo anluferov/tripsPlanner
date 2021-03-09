@@ -9,22 +9,14 @@ import UIKit
 
 protocol TripCreationNavigatorViewControllable: ViewControllable {
     var presenter: TripCreationNavigatorPresenterInteractable? { get set }
-
-    func resetPlaceName()
 }
 
 protocol TripCreationNavigatorViewRoutable: ViewRoutable {
-    func embedPlace(_ viewController: ViewController)
+
 }
 
-final class TripCreationNavigatorViewController: ViewController {
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var tripHintLabel: UILabel!
-    @IBOutlet private weak var tripNameTextField: UITextField!
-    @IBOutlet private weak var placesHintLabel: UILabel!
-    @IBOutlet private weak var placeNameTextField: UITextField!
-    @IBOutlet private weak var placesContainerStackView: UIStackView!
-    @IBOutlet private weak var addPlaceButton: UIButton!
+final class TripCreationNavigatorViewController: ViewController, TripCreationNavigatorViewControllable, TripCreationNavigatorViewRoutable {
+    @IBOutlet private weak var stepContainerView: UIView!
     @IBOutlet private weak var nextButton: UIButton!
 
     var presenter: TripCreationNavigatorPresenterInteractable?
@@ -36,54 +28,37 @@ final class TripCreationNavigatorViewController: ViewController {
     }
 
     @IBAction private func tapNextButtonAction(_ sender: Any) {
-        guard let tripName = tripNameTextField.text else {
-            return
-        }
-        presenter?.createTripAction(tripName: tripName)
-    }
-    
-    @IBAction private func tapAddPlacePreviewAction(_ sender: Any) {
-        guard let placeName = placeNameTextField.text else {
-            return
-        }
-        presenter?.createPlaceAction(placeName: placeName)
+        presenter?.createTripAction()
     }
 }
 
-extension TripCreationNavigatorViewController: TripCreationNavigatorViewControllable {
-    func resetPlaceName() {
-        placeNameTextField.text = ""
-    }
-}
-
-extension TripCreationNavigatorViewController: TripCreationNavigatorViewRoutable {
-    func embedPlace(_ viewController: ViewController) {
-        addChild(viewController: viewController, into: placesContainerStackView)
+extension TripCreationNavigatorViewController: TripCreationBasicInfoViewDelegate {
+    func didUpdateTitle(_ title: String) {
+        if !title.isEmpty, !nextButton.isEnabled {
+            nextButton.isEnabled = true
+            presenter?.updateTripTitleAction(title)
+        }
     }
 }
 
 private extension TripCreationNavigatorViewController {
     func setupUI() {
-        titleLabel.text = "Step 1: Set Trip name and places you plan to visit"
-        tripHintLabel.text = "Enter trip name"
-        placesHintLabel.text = "Enter place name"
-
-        tripNameTextField.addTarget(self, action: #selector(tripNameDidChange(_:)), for: .editingChanged)
-        placeNameTextField.addTarget(self, action: #selector(placeNameDidChange(_:)), for: .editingChanged)
-
-        addPlaceButton.isEnabled = false
         nextButton.isEnabled = false
+        nextButton.applyDefaultButtonStyle()
+        prepareTripCreationBasicInfoStep()
     }
 
-    @objc func tripNameDidChange(_ textField: UITextField) {
-        if let tripName = tripNameTextField.text, !tripName.isEmpty, !nextButton.isEnabled {
-            nextButton.isEnabled = true
-        }
-    }
+    func prepareTripCreationBasicInfoStep() {
+        let basicTripInfoStep = TripCreationBasicInfoView()
+        basicTripInfoStep.update(viewModel: TripCreationBasicInfoViewModel())
+        basicTripInfoStep.delegate = self
 
-    @objc func placeNameDidChange(_ textField: UITextField) {
-        if let placeName = placeNameTextField.text, !placeName.isEmpty, !addPlaceButton.isEnabled {
-            addPlaceButton.isEnabled = true
-        }
+        stepContainerView.addSubview(basicTripInfoStep)
+        NSLayoutConstraint.activate([
+            stepContainerView.leadingAnchor.constraint(equalTo: basicTripInfoStep.leadingAnchor),
+            stepContainerView.trailingAnchor.constraint(equalTo: basicTripInfoStep.trailingAnchor),
+            stepContainerView.topAnchor.constraint(equalTo: basicTripInfoStep.topAnchor),
+            stepContainerView.bottomAnchor.constraint(equalTo: basicTripInfoStep.bottomAnchor)
+        ])
     }
 }

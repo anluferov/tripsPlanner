@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnderlinedDateField" customModule="tripsPlanner" customModuleProvider="target">
+            <connections>
+                <outlet property="coloredLineView" destination="joo-01-Xvf" id="8HH-Pw-1eg"/>
+                <outlet property="datePicker" destination="Bgx-Xc-Vcj" id="v5S-3h-Ags"/>
+                <outlet property="titleLabel" destination="Khy-kf-PQk" id="BmF-WS-rqE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khy-kf-PQk" userLabel="Title Label">
+                    <rect key="frame" x="0.0" y="5" width="41.5" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joo-01-Xvf" userLabel="Colored Line View">
+                    <rect key="frame" x="0.0" y="48" width="414" height="2"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="lrm-OM-1pn"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Bgx-Xc-Vcj">
+                    <rect key="frame" x="94" y="0.0" width="320" height="50"/>
+                    <connections>
+                        <action selector="datePickerDateChanged:" destination="-1" eventType="valueChanged" id="a6t-ok-lhZ"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="joo-01-Xvf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="503-Jc-LSX"/>
+                <constraint firstAttribute="bottom" secondItem="joo-01-Xvf" secondAttribute="bottom" id="GXz-MY-TQ1"/>
+                <constraint firstAttribute="trailing" secondItem="Bgx-Xc-Vcj" secondAttribute="trailing" id="Q4w-dU-EHk"/>
+                <constraint firstItem="Bgx-Xc-Vcj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RCQ-j4-BzH"/>
+                <constraint firstItem="Khy-kf-PQk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S38-Om-g2g"/>
+                <constraint firstAttribute="trailing" secondItem="joo-01-Xvf" secondAttribute="trailing" id="Vlp-hY-LDf"/>
+                <constraint firstItem="Khy-kf-PQk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="mVQ-18-WzV"/>
+                <constraint firstAttribute="bottom" secondItem="Bgx-Xc-Vcj" secondAttribute="bottom" id="qMo-O5-W7m"/>
+                <constraint firstAttribute="bottom" secondItem="Khy-kf-PQk" secondAttribute="bottom" constant="5" id="tTT-3E-lDJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130" y="95"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

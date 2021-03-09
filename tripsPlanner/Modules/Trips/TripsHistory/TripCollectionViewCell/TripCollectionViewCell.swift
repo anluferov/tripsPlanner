@@ -17,7 +17,7 @@ class TripCollectionViewCell: UICollectionViewCell {
         backgroundColor = .clear
 
         backgroundContentView.backgroundColor = R.color.illuminating()
-        backgroundContentView.layer.cornerRadius = 20.0
+        backgroundContentView.layer.cornerRadius = 12.0
         backgroundContentView.applyDefaultShadow()
     }
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnderlinedTextField" customModule="tripsPlanner" customModuleProvider="target">
+            <connections>
+                <outlet property="coloredLineView" destination="vdH-Yn-xA2" id="9h1-c2-LT6"/>
+                <outlet property="textField" destination="Lpb-gk-fyo" id="QtM-35-t41"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-gk-fyo">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdH-Yn-xA2" userLabel="Colored Line View">
+                    <rect key="frame" x="0.0" y="40" width="414" height="2"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="9xb-YI-XsK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vdH-Yn-xA2" firstAttribute="top" secondItem="Lpb-gk-fyo" secondAttribute="bottom" id="60H-Su-F8F"/>
+                <constraint firstItem="Lpb-gk-fyo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GWB-YD-on6"/>
+                <constraint firstAttribute="trailing" secondItem="vdH-Yn-xA2" secondAttribute="trailing" id="K5c-ME-LJ3"/>
+                <constraint firstItem="Lpb-gk-fyo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LYZ-rh-8Bd"/>
+                <constraint firstAttribute="trailing" secondItem="Lpb-gk-fyo" secondAttribute="trailing" id="TwV-Wh-J2N"/>
+                <constraint firstItem="vdH-Yn-xA2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a2e-5b-NbE"/>
+                <constraint firstAttribute="bottom" secondItem="vdH-Yn-xA2" secondAttribute="bottom" id="bIg-wA-YeA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="128.98550724637681" y="113.83928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

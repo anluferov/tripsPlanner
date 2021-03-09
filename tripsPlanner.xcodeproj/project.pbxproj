@@ -15,6 +15,15 @@
 		CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */; };
 		CE1722B22571AE9F00AD32A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722B12571AE9F00AD32A1 /* ViewController.swift */; };
 		CE353B5E25F77DA500F53D74 /* ServiceDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B5D25F77DA500F53D74 /* ServiceDependency.swift */; };
+		CE353B6725F791F700F53D74 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B6625F791F700F53D74 /* UIView+Extensions.swift */; };
+		CE353B6A25F7958300F53D74 /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B6925F7958300F53D74 /* XIBView.swift */; };
+		CE353B6E25F795DE00F53D74 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B6D25F795DE00F53D74 /* UnderlinedTextField.swift */; };
+		CE353B7225F795E800F53D74 /* UnderlinedTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE353B7125F795E800F53D74 /* UnderlinedTextField.xib */; };
+		CE353B7725F79B9B00F53D74 /* TripCreationBasicInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE353B7625F79B9B00F53D74 /* TripCreationBasicInfoView.xib */; };
+		CE353B7A25F79BA300F53D74 /* TripCreationBasicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B7925F79BA300F53D74 /* TripCreationBasicInfoView.swift */; };
+		CE353B7D25F7A11600F53D74 /* TripCreationBasicInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B7C25F7A11600F53D74 /* TripCreationBasicInfoViewModel.swift */; };
+		CE353B8325F7A61C00F53D74 /* UnderlinedDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B8225F7A61C00F53D74 /* UnderlinedDateField.swift */; };
+		CE353B8725F7A62500F53D74 /* UnderlinedDateField.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE353B8625F7A62500F53D74 /* UnderlinedDateField.xib */; };
 		CE79F2F82571B32A0081239F /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79F2F72571B32A0081239F /* ViewControllable.swift */; };
 		CE88C3EA2588082800EEE24B /* SplitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E72588082800EEE24B /* SplitPresenter.swift */; };
 		CE88C3EB2588082800EEE24B /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E82588082800EEE24B /* SplitViewController.swift */; };
@@ -80,6 +89,15 @@
 		CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInteractable.swift; sourceTree = "<group>"; };
 		CE1722B12571AE9F00AD32A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE353B5D25F77DA500F53D74 /* ServiceDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDependency.swift; sourceTree = "<group>"; };
+		CE353B6625F791F700F53D74 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		CE353B6925F7958300F53D74 /* XIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
+		CE353B6D25F795DE00F53D74 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		CE353B7125F795E800F53D74 /* UnderlinedTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderlinedTextField.xib; sourceTree = "<group>"; };
+		CE353B7625F79B9B00F53D74 /* TripCreationBasicInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripCreationBasicInfoView.xib; sourceTree = "<group>"; };
+		CE353B7925F79BA300F53D74 /* TripCreationBasicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreationBasicInfoView.swift; sourceTree = "<group>"; };
+		CE353B7C25F7A11600F53D74 /* TripCreationBasicInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCreationBasicInfoViewModel.swift; sourceTree = "<group>"; };
+		CE353B8225F7A61C00F53D74 /* UnderlinedDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedDateField.swift; sourceTree = "<group>"; };
+		CE353B8625F7A62500F53D74 /* UnderlinedDateField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderlinedDateField.xib; sourceTree = "<group>"; };
 		CE79F2F72571B32A0081239F /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
 		CE88C3E72588082800EEE24B /* SplitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitPresenter.swift; sourceTree = "<group>"; };
 		CE88C3E82588082800EEE24B /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +197,34 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		CE353B6C25F795C600F53D74 /* UnderlinedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				CE353B7125F795E800F53D74 /* UnderlinedTextField.xib */,
+				CE353B6D25F795DE00F53D74 /* UnderlinedTextField.swift */,
+			);
+			path = UnderlinedTextField;
+			sourceTree = "<group>";
+		};
+		CE353B7525F79B6F00F53D74 /* TripCreationBasicInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				CE353B7625F79B9B00F53D74 /* TripCreationBasicInfoView.xib */,
+				CE353B7925F79BA300F53D74 /* TripCreationBasicInfoView.swift */,
+				CE353B7C25F7A11600F53D74 /* TripCreationBasicInfoViewModel.swift */,
+			);
+			path = TripCreationBasicInfoView;
+			sourceTree = "<group>";
+		};
+		CE353B8125F7A5EB00F53D74 /* UnderlinedDateField */ = {
+			isa = PBXGroup;
+			children = (
+				CE353B8625F7A62500F53D74 /* UnderlinedDateField.xib */,
+				CE353B8225F7A61C00F53D74 /* UnderlinedDateField.swift */,
+			);
+			path = UnderlinedDateField;
+			sourceTree = "<group>";
+		};
 		CE79F2FA2571B3340081239F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +262,9 @@
 		CE7F595025719D3900C01F6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE353B8125F7A5EB00F53D74 /* UnderlinedDateField */,
+				CE353B6C25F795C600F53D74 /* UnderlinedTextField */,
+				CE353B6925F7958300F53D74 /* XIBView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +402,7 @@
 		CE9CDD51257967090020E3E4 /* TripCreationNavigator */ = {
 			isa = PBXGroup;
 			children = (
+				CE353B7525F79B6F00F53D74 /* TripCreationBasicInfoView */,
 				CEB45745257D5E46000F12DF /* TripCreationNavigator.storyboard */,
 				CEB4573F257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift */,
 				CEB4573D257D5E2E000F12DF /* TripCreationNavigatorPresenter.swift */,
@@ -454,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				CED7A51725728424006C8BE3 /* Array+Extension.swift */,
+				CE353B6625F791F700F53D74 /* UIView+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -541,10 +592,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB45746257D5E46000F12DF /* TripCreationNavigator.storyboard in Resources */,
+				CE353B8725F7A62500F53D74 /* UnderlinedDateField.xib in Resources */,
 				CED7A4DB25725C8D006C8BE3 /* TripsHistory.storyboard in Resources */,
 				CEE5A13E257255DE00E1569A /* Assets.xcassets in Resources */,
+				CE353B7725F79B9B00F53D74 /* TripCreationBasicInfoView.xib in Resources */,
 				CE88C3F72588097600EEE24B /* SideBar.storyboard in Resources */,
 				CE9CDD6B2579788C0020E3E4 /* PlanDetails.storyboard in Resources */,
+				CE353B7225F795E800F53D74 /* UnderlinedTextField.xib in Resources */,
 				CEA4F990257289CA00BE472E /* TripLegend.storyboard in Resources */,
 				CE9A60ED256BD51700193D24 /* LaunchScreen.storyboard in Resources */,
 				CE9CDD8925797B6A0020E3E4 /* PlaceDetails.storyboard in Resources */,
@@ -645,9 +699,11 @@
 				CE88C3F4258808D000EEE24B /* SideBarBuilder.swift in Sources */,
 				CEB45741257D5E2E000F12DF /* TripCreationNavigatorViewController.swift in Sources */,
 				CE353B5E25F77DA500F53D74 /* ServiceDependency.swift in Sources */,
+				CE353B7A25F79BA300F53D74 /* TripCreationBasicInfoView.swift in Sources */,
 				CE88C3EB2588082800EEE24B /* SplitViewController.swift in Sources */,
 				CE9A60DE256BD51400193D24 /* AppDelegate.swift in Sources */,
 				CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */,
+				CE353B6725F791F700F53D74 /* UIView+Extensions.swift in Sources */,
 				CEB45735257D3BD7000F12DF /* TripDetail.swift in Sources */,
 				CED7A4FF25727216006C8BE3 /* PlanModel.swift in Sources */,
 				CE9CDD7C25797B360020E3E4 /* PlanDetailsViewController.swift in Sources */,
@@ -665,12 +721,15 @@
 				CED7A4D825725C4C006C8BE3 /* TripsHistoryViewController.swift in Sources */,
 				CE9CDD7B25797B360020E3E4 /* PlanDetailsPresenter.swift in Sources */,
 				CED7A50825727FC9006C8BE3 /* TripCollectionViewCellViewModel.swift in Sources */,
+				CE353B7D25F7A11600F53D74 /* TripCreationBasicInfoViewModel.swift in Sources */,
+				CE353B8325F7A61C00F53D74 /* UnderlinedDateField.swift in Sources */,
 				CEA4F9952572DBC700BE472E /* RootBuilder.swift in Sources */,
 				CE9A60E0256BD51400193D24 /* SceneDelegate.swift in Sources */,
 				CE1722A22571AE0E00AD32A1 /* RootPresenter.swift in Sources */,
 				CE9CDD9025797BDC0020E3E4 /* PlaceDetailsPresenter.swift in Sources */,
 				CEA4F989257289AB00BE472E /* TripLegendViewController.swift in Sources */,
 				CED9832A259A224200B2E4A3 /* RootMenuItem.swift in Sources */,
+				CE353B6E25F795DE00F53D74 /* UnderlinedTextField.swift in Sources */,
 				CE88C3EC2588082800EEE24B /* SplitBuilder.swift in Sources */,
 				CEAC8A742572E52D00BDAD96 /* TripViewModel.swift in Sources */,
 				CE88C3F3258808D000EEE24B /* SideBarViewController.swift in Sources */,
@@ -681,6 +740,7 @@
 				CED7A51325728288006C8BE3 /* TripCollectionViewCell.swift in Sources */,
 				CED7A4D525725C3F006C8BE3 /* TripsHistoryPresenter.swift in Sources */,
 				CEA4F99A2572DC3400BE472E /* TabBarBuilder.swift in Sources */,
+				CE353B6A25F7958300F53D74 /* XIBView.swift in Sources */,
 				CEE5A136257252AA00E1569A /* ViewRoutable.swift in Sources */,
 				CEA4F99F2572E08900BE472E /* RootMenuItemViewModel.swift in Sources */,
 				CEB45742257D5E2E000F12DF /* TripCreationNavigatorBuilder.swift in Sources */,

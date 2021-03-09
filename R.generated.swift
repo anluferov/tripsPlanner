@@ -228,6 +228,54 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  struct nib {
+    /// Nib `TripCreationBasicInfoView`.
+    static let tripCreationBasicInfoView = _R.nib._TripCreationBasicInfoView()
+    /// Nib `UnderlinedDateField`.
+    static let underlinedDateField = _R.nib._UnderlinedDateField()
+    /// Nib `UnderlinedTextField`.
+    static let underlinedTextField = _R.nib._UnderlinedTextField()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "TripCreationBasicInfoView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.tripCreationBasicInfoView) instead")
+    static func tripCreationBasicInfoView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.tripCreationBasicInfoView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "UnderlinedDateField", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.underlinedDateField) instead")
+    static func underlinedDateField(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.underlinedDateField)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "UnderlinedTextField", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.underlinedTextField) instead")
+    static func underlinedTextField(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.underlinedTextField)
+    }
+    #endif
+
+    static func tripCreationBasicInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.tripCreationBasicInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func underlinedDateField(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.underlinedDateField.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func underlinedTextField(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.underlinedTextField.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `tripCellIdentifier`.
@@ -255,6 +303,45 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _TripCreationBasicInfoView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "TripCreationBasicInfoView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _UnderlinedDateField: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "UnderlinedDateField"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _UnderlinedTextField: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "UnderlinedTextField"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

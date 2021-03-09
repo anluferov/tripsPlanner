@@ -14,14 +14,18 @@ protocol TripCreationNavigatorDelegate: AnyObject {
 protocol TripCreationNavigatorPresenterInteractable: PresenterInteractable {
     var view: (TripCreationNavigatorViewControllable & TripCreationNavigatorViewRoutable)? { get set }
 
-    func createTripAction(tripName: String)
-    func createPlaceAction(placeName: String)
+    //TODO: refactor methods to one ore several aka updateTrip methods
+    func updateTripTitleAction(_ title: String)
+    func updatePlaceAction(placeName: String)
+    func createTripAction()
 }
 
 final class TripCreationNavigatorPresenter {
     weak var view: (TripCreationNavigatorViewControllable & TripCreationNavigatorViewRoutable)?
 
     private weak var delegate: TripCreationNavigatorDelegate?
+
+    private var tripName: String = ""
 
     @ServiceDependency private(set) var tripsService: TripsServiceProtocol
 
@@ -38,15 +42,17 @@ extension TripCreationNavigatorPresenter: TripCreationNavigatorPresenterInteract
 
     }
 
-    func createTripAction(tripName: String) {
-        tripsService.saveTrip(TripModel(name: tripName, places: placesModels, plans: []))
-        delegate?.didFinishSaveTripFlow()
+    func updateTripTitleAction(_ title: String) {
+        tripName = title
     }
 
-    func createPlaceAction(placeName: String) {
+    func updatePlaceAction(placeName: String) {
         let place = PlaceModel(name: placeName, plans: [])
         placesModels.append(place)
-        view?.embedPlace(PlaceDetailsBuilder.build(place: place, mode: .read))
-        view?.resetPlaceName()
+    }
+
+    func createTripAction() {
+        tripsService.saveTrip(TripModel(name: tripName, places: placesModels, plans: []))
+        delegate?.didFinishSaveTripFlow()
     }
 }
