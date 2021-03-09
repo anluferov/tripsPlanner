@@ -25,7 +25,7 @@ final class SideBarPresenter {
     private let rootMenuOptions: [RootMenuItem] = [.profile, .explore, .statistics]
     private var tripsMenuItems: [TripModel] = []
 
-    private let tripsService: TripsServiceProtocol = ServiceContainer.shared.tripsService
+    @ServiceDependency private(set) var tripsService: TripsServiceProtocol
 
     init(view: (SideBarViewControllable & SideBarViewRoutable), delegate: SideBarDelegate?) {
         self.view = view

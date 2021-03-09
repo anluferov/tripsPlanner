@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {
             return
         }
+
+        ServiceContainer.register(TripsService() as TripsServiceProtocol)
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = RootBuilder.build()

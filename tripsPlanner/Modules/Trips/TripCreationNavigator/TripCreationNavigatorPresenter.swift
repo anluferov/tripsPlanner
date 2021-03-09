@@ -23,7 +23,7 @@ final class TripCreationNavigatorPresenter {
 
     private weak var delegate: TripCreationNavigatorDelegate?
 
-    private let tripsService: TripsServiceProtocol = ServiceContainer.shared.tripsService
+    @ServiceDependency private(set) var tripsService: TripsServiceProtocol
 
     private var placesModels: [PlaceModel] = []
 

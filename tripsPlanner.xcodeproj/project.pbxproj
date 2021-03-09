@@ -14,6 +14,7 @@
 		CE1722AB2571AE5300AD32A1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722AA2571AE5300AD32A1 /* TabBarViewController.swift */; };
 		CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */; };
 		CE1722B22571AE9F00AD32A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1722B12571AE9F00AD32A1 /* ViewController.swift */; };
+		CE353B5E25F77DA500F53D74 /* ServiceDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353B5D25F77DA500F53D74 /* ServiceDependency.swift */; };
 		CE79F2F82571B32A0081239F /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79F2F72571B32A0081239F /* ViewControllable.swift */; };
 		CE88C3EA2588082800EEE24B /* SplitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E72588082800EEE24B /* SplitPresenter.swift */; };
 		CE88C3EB2588082800EEE24B /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C3E82588082800EEE24B /* SplitViewController.swift */; };
@@ -78,6 +79,7 @@
 		CE1722AA2571AE5300AD32A1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CE1722AE2571AE8300AD32A1 /* PresenterInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInteractable.swift; sourceTree = "<group>"; };
 		CE1722B12571AE9F00AD32A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE353B5D25F77DA500F53D74 /* ServiceDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDependency.swift; sourceTree = "<group>"; };
 		CE79F2F72571B32A0081239F /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
 		CE88C3E72588082800EEE24B /* SplitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitPresenter.swift; sourceTree = "<group>"; };
 		CE88C3E82588082800EEE24B /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CED7A4EE257267F6006C8BE3 /* ServiceContainer.swift */,
+				CE353B5D25F77DA500F53D74 /* ServiceDependency.swift */,
 				CED7A4E2257266B0006C8BE3 /* TripsService */,
 			);
 			path = Services;
@@ -641,6 +644,7 @@
 				CED7A50225727228006C8BE3 /* ToDoModel.swift in Sources */,
 				CE88C3F4258808D000EEE24B /* SideBarBuilder.swift in Sources */,
 				CEB45741257D5E2E000F12DF /* TripCreationNavigatorViewController.swift in Sources */,
+				CE353B5E25F77DA500F53D74 /* ServiceDependency.swift in Sources */,
 				CE88C3EB2588082800EEE24B /* SplitViewController.swift in Sources */,
 				CE9A60DE256BD51400193D24 /* AppDelegate.swift in Sources */,
 				CE1722AF2571AE8300AD32A1 /* PresenterInteractable.swift in Sources */,

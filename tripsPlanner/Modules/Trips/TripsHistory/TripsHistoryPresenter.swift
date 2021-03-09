@@ -17,7 +17,7 @@ protocol TripsHistoryPresenterInteractable: PresenterInteractable {
 final class TripsHistoryPresenter {
     weak var view: (TripsHistoryViewControllable & TripsHistoryViewRoutable)?
 
-    private let tripsService: TripsServiceProtocol = ServiceContainer.shared.tripsService
+    @ServiceDependency private(set) var tripsService: TripsServiceProtocol
 
     init(view: (TripsHistoryViewControllable & TripsHistoryViewRoutable)) {
         self.view = view
