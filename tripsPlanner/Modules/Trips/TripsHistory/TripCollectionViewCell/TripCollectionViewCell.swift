@@ -9,11 +9,16 @@ import UIKit
 
 class TripCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var descriptionLabel: UILabel!
-    
+    @IBOutlet private weak var backgroundContentView: UIView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        backgroundColor = .clear
 
-        backgroundColor = .purple
+        backgroundContentView.backgroundColor = R.color.illuminating()
+        backgroundContentView.layer.cornerRadius = 20.0
+        backgroundContentView.applyDefaultShadow()
     }
 
     func update(description: String) {
